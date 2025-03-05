@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="173.821">
+<testcase classname="user should be able to switch between currency" name="user able to switch between currency" time="14.581">
+<system-out><![CDATA[Given user press on currency dropdown and switch to Euro....................passed
+When user scroll down.......................................................passed
+Then Euro should be displayed...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="switch between windows" name="user able to open facebook" time="14.79">
+<system-out><![CDATA[When user open facebook.....................................................passed
+Then user close facebook and switch back....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="switch between windows" name="user able to open twitter" time="13.049">
+<system-out><![CDATA[When user open twitter......................................................passed
+Then user close twitter and switch back.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="switch between windows" name="user able to open Rss" time="10.023">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user open Rss..........................................................failed
+Then user close Rss and switch back.........................................skipped
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at pages.FollowUS_page.switchToRss(FollowUS_page.java:52)
+	at stepDefs.FollowUS_stepDefs.navigateRss(FollowUS_stepDefs.java:36)
+	at ✽.user open Rss(file:///C:/E-commerce/src/main/resources/features/FollowUs.feature:18)
+]]></failure>
+</testcase>
+<testcase classname="switch between windows" name="user able to open youTube" time="19.554">
+<system-out><![CDATA[When user open youTube......................................................passed
+Then user close youTube and switch back.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user compare between two slide" name="user compare between Urls for slide 1" time="8.631">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given user can press on first slide.........................................passed
+Then compare between URls of first slide and fail...........................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at stepDefs.HomeSlider_stepDefs.comparefirstSlideLink(HomeSlider_stepDefs.java:23)
+	at ✽.compare between URls of first slide and fail(file:///C:/E-commerce/src/main/resources/features/HomeSliderPage.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="user compare between two slide" name="user compare between Urls for slide 2" time="9.755">
+<failure message="expected [https://demo.nopcommerce.com/iphone] but found [https://demo.nopcommerce.com/#]" type="java.lang.AssertionError"><![CDATA[Given user can press on second slide........................................passed
+Then compare between URls of second slide and fail..........................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone] but found [https://demo.nopcommerce.com/#]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at stepDefs.HomeSlider_stepDefs.compareSecondSlideLink(HomeSlider_stepDefs.java:33)
+	at ✽.compare between URls of second slide and fail(file:///C:/E-commerce/src/main/resources/features/HomeSliderPage.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="user select different Categories" name="user able to hover on category then open sub-Category" time="10.169">
+<system-out><![CDATA[Given open Homepage and hover on Category...................................passed
+Then user can open sub-Category and get Text................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user able to login to Application" name="user should be able to login successfully" time="15.348">
+<failure message="The following asserts failed:&#10;&#9;expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/login?returnurl=%2F]" type="java.lang.AssertionError"><![CDATA[Given user open Login Link..................................................passed
+When user enter Email and Password..........................................passed
+And user click on Login Button..............................................passed
+Then user should login successfully.........................................failed
+
+StackTrace:
+java.lang.AssertionError: The following asserts failed:
+	expected [https://demo.nopcommerce.com/] but found [https://demo.nopcommerce.com/login?returnurl=%2F]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+	at stepDefs.Login_stepDefs.loginUserSuccess(Login_stepDefs.java:32)
+	at ✽.user should login successfully(file:///C:/E-commerce/src/main/resources/features/Login.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="user should be register to application" name="user able to register" time="20.648">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Log out&quot;}&#10;  (Session info: chrome=108.0.5359.124)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.1', revision: 'c6795baf1a3'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [734710625511502584764afddd4151ed, findElement {using=link text, value=Log out}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.124, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55756}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55756/devtoo..., se:cdpVersion: 108.0.5359.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 734710625511502584764afddd4151ed" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user open Register Link...............................................passed
+When user enter personal data and Email.....................................passed
+And user enter password and confirm password................................passed
+And user click on Register button...........................................passed
+Then page should be opened successfully.....................................passed
+And user log out............................................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Log out"}
+  (Session info: chrome=108.0.5359.124)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_351'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [734710625511502584764afddd4151ed, findElement {using=link text, value=Log out}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.124, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55756}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55756/devtoo..., se:cdpVersion: 108.0.5359.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 734710625511502584764afddd4151ed
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pages.Register_page.clickButton(Register_page.java:71)
+	at pages.Register_page.userLogOut(Register_page.java:96)
+	at stepDefs.Register_stepDefs.Logout(Register_stepDefs.java:50)
+	at ✽.user log out(file:///C:/E-commerce/src/main/resources/features/Register.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="user able to search on product" name="user should be able to search with Apple product" time="13.474">
+<system-out><![CDATA[Given user open Home Page and open search...................................passed
+When user enter Product as "Apple"..........................................passed
+And user search.............................................................passed
+Then All words of search contain Apple......................................passed
+And user open link and found Sku............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user able to add product to wish list" name="user able to press on add wish on product" time="9.216">
+<system-out><![CDATA[Given user open page and click on product wishlist..........................passed
+Then message displayed with green...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user able to add product to wish list" name="user able to press on add wish on product and open  link Wishlist" time="13.689">
+<system-out><![CDATA[Given user open home page and click on button add to wishlist...............passed
+And wait for element to be invisible........................................passed
+Then user able to click on wishList Link....................................passed
+]]></system-out>
+</testcase>
+</testsuite>
