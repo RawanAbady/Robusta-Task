@@ -40,6 +40,3 @@ An automated testing suite for an e-commerce website using Java, Selenium, Cucum
 ## Contribution
 Contribute by adding tests or improving scripts.
 
-## License
-Licensed under [MIT License](LICENSE).
-
